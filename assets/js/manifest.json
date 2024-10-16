@@ -1,0 +1,13 @@
+{
+  "name": "اپ خوشبختی",
+  "short_name": "خوشبختی",
+  "icons": [
+    {
+      "src": "../images/pwa_logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone"
+}

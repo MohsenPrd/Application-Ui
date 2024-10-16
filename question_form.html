@@ -1,121 +1,826 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>خوشبختی</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/font/fontawesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/images/profile.png" />
 
-  <div class="web_container">
-    <div class="header">
-      <div class="menu">
-        <img src="assets/images/patern.png">
-        <i class="fa fa-times-circle-o close" aria-hidden="true" style="color: white;"></i>
-        <ul>
-          <li>
-            <a href="https://">
-              <i class="fa fa-user-circle-o" aria-hidden="true" style="color:#ff92a4;"></i>
-              پروفایل من
-            </a>
-          </li>
-          <li>
-            <a href="https://">
-              <i class="fa fa-user-circle-o" aria-hidden="true" style="color:#ffdd83;"></i>
-              تنظیمات
-            </a>
-          </li>
-          <li>
-            <a href="https://">
-              <i class="fa fa-braille" aria-hidden="true" style="color:#4d50be;"></i>
-              فرم روزانه
-            </a>
-          </li>
-          <li>
-            <a href="https://">
-              <i class="fa fa-user-circle-o" aria-hidden="true" style="color:#409a34;"></i>
-              گزارشات
-            </a>
-          </li>
-          <li>
-            <a href="https://">
-              <i class="fa fa-sign-out" aria-hidden="true" style="color:#c93939;"></i>
-              خروج
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="header-top">
-        <div class="icon-menu">
-          <i class="fa fa-th menu-btn" aria-hidden="true"></i>
-        </div>
-        <div class="profile">
-          <img src="assets/images/user-icon.webp">
-        </div>
-      </div>
-      <div class="header-bottom">
-        <img src="assets/images/patern.png">
-        <h2>خوش آمدید</h2>
-        <h6>اپلیکیشن سنجش میزان خوشبختی</h6>
-      </div>
-    </div>
-    <div class="information">
-      <div class="web-body">
-        <!-- <div class="row">
-          <div class="col-12">
-            <p>در حال حاضر چه احساسی دارید؟</p>
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-          </div>
-        </div> -->
-      </div>
-    </div>
-    <div class="footer">
+    <title>خوشبختی</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/libs/fontawesome/all.css" />
+    <link
+      rel="stylesheet"
+      href="assets/font/fontawesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/libs/splidejs/splide.min.css" />
+    <link rel="stylesheet" href="assets/libs/splidejs/splide-core.min.css" />
+    <link rel="stylesheet" href="assets/libs/scrollcue/scrollCue.css" />
+
+  </head>
+  <body>
+    <div class="menu">
+      <img src="assets/images/patern.png" />
+      <i
+        class="fa fa-times-circle-o close"
+        aria-hidden="true"
+        style="color: white"
+      ></i>
       <ul>
         <li>
           <a href="https://">
-            <i class="fa fa-user-circle-o" aria-hidden="true" style="color:#ff92a4;"></i>
+            <i
+              class="fa fa-user-circle-o"
+              aria-hidden="true"
+              style="color: #ff92a4"
+            ></i>
             پروفایل من
           </a>
         </li>
         <li>
-          <a href="https://">
-            <i class="fa fa-user-circle-o" aria-hidden="true" style="color:#ffdd83;"></i>
+          <a href="settings.html">
+            <i
+              class="fa fa-user-circle-o"
+              aria-hidden="true"
+              style="color: #ffdd83"
+            ></i>
             تنظیمات
           </a>
         </li>
         <li>
-          <a href="https://">
-            <i class="fa fa-braille" aria-hidden="true" style="color:#4d50be;"></i>
+          <a href="question_form.html">
+            <i
+              class="fa fa-braille"
+              aria-hidden="true"
+              style="color: #4d50be"
+            ></i>
             فرم روزانه
           </a>
         </li>
         <li>
           <a href="https://">
-            <i class="fa fa-user-circle-o" aria-hidden="true" style="color:#409a34;"></i>
+            <i
+              class="fa fa-user-circle-o"
+              aria-hidden="true"
+              style="color: #409a34"
+            ></i>
             گزارشات
           </a>
         </li>
         <li>
-          <a href="https://">
-            <i class="fa fa-sign-out" aria-hidden="true" style="color:#c93939;"></i>
+          <a href="login.html">
+            <i
+              class="fa fa-sign-out"
+              aria-hidden="true"
+              style="color: #c93939"
+            ></i>
             خروج
           </a>
         </li>
       </ul>
     </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script>
-    $('.menu-btn').click(function () {
-      $('.menu').css('margin-right', '0%');
-    });
-    $('.close').click(function () {
-      $('.menu').css('margin-right', '-100%');
-    });
-  </script>
-</body>
+    <div class="web_container w-100">
+      <div class="header">
+        <div
+          class="header-top position-relative overflow-hidden"
+          style="isolation: isolate"
+        >
+          <div class="icon-menu" data-cue="slideInRight">
+            <i class="fa fa-th menu-btn" aria-hidden="true"></i>
+          </div>
+          <div class="profile" data-cue="slideInLeft">
+            <img src="assets/images/user-icon.webp" />
+          </div>
+          <video
+            src="assets/images/particles.mp4"
+            loop
+            muted
+            autoplay
+            class="w-100 position-absolute"
+            style="mix-blend-mode: screen; z-index: -1"
+          ></video>
+        </div>
+        <div class="header-bottom">
+          <img src="assets/images/patern.png" />
+          <h2 data-cue="slideInDown">فرم روزانه</h2>
+          <h6 data-cue="slideInRight">پرسش‌های روزانه را تکمیل کنید.</h6>
+        </div>
+      </div>
+      <div class="information">
+        <div class="web-body">
+          <form action="#" method="post" class="mt-5 col-12 text-center">
+            <div class="buttons-container mb-3" data-cue="slideInDown">
+              <span
+                class="btn px-4 py-2 text-white"
+                style="background-color: #4d50be"
+                id="next"
+                >بعدی</span
+              >
+              <span class="btn px-4 py-2 btn-secondary" id="prev">قبلی</span>
+            </div>
+            <section class="splide" data-cue="slideInUp">
+              <div class="splide__track">
+                <ul class="splide__list" dir="ltr">
+                  <li class="splide__slide d-flex justify-content-center">
+                    <div class="col-10">
+                      <div>
+                        <div class="h6 fw-bold mb-3">سوال 1:</div>
+                        <p class="pb-5">در حال حاضر چه احساسی دارید؟</p>
+                        <div class="col-12 mt-5 mb-2">
+                          <tc-range-slider
+                            rtl="true"
+                            slider-bg-fill="#4e51be"
+                            slider-width="100%"
+                            slider-height="0.9rem"
+                            pointer1-width="30px"
+                            pointer1-height="30px"
+                            value1="50"
+                            generate-labels="true"
+                            round="0"
+                            moving-tooltip="true"
+                            moving-tooltip-distance-to-pointer="40"
+                            moving-tooltip-width="35"
+                            moving-tooltip-height="30"
+                            moving-tooltip-bg="#4e51be"
+                            moving-tooltip-text-color="#efefef"
+                            moving-tooltip-units="%"
+                          ></tc-range-slider>
+                        </div>
+                        <div class="d-flex flex-wrap">
+                          <div class="col-6 text-start text-danger right-range">
+                            <i class="fa-regular fa-face-frown"></i>
+                            غمگین
+                          </div>
+                          <div class="col-6 text-end text-success left-range">
+                            خوشحال
+                            <i class="fa-regular fa-face-smile"></i>
+                          </div>
+                        </div>
+                        <div class="col-12 mt-5 mb-2">
+                          <tc-range-slider
+                            rtl="true"
+                            slider-bg-fill="#4e51be"
+                            slider-width="100%"
+                            slider-height="0.9rem"
+                            pointer1-width="30px"
+                            pointer1-height="30px"
+                            value1="50"
+                            generate-labels="true"
+                            round="0"
+                            moving-tooltip="true"
+                            moving-tooltip-distance-to-pointer="40"
+                            moving-tooltip-width="35"
+                            moving-tooltip-height="30"
+                            moving-tooltip-bg="#4e51be"
+                            moving-tooltip-text-color="#efefef"
+                            moving-tooltip-units="%"
+                          ></tc-range-slider>
+                        </div>
+                        <div class="d-flex flex-wrap">
+                          <div class="col-6 text-start text-success">
+                            آرام
+                            <i class="fa-regular fa-face-relieved"></i>
+                          </div>
+                          <div class="col-6 text-end text-danger">
+                            <i class="fa-regular fa-face-downcast-sweat"></i>
+                            مضطرب
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="splide__slide d-flex justify-content-center">
+                    <div class="col-10">
+                      <div>
+                        <div class="h6 fw-bold mb-3">سوال 2:</div>
+                        <p class="pb-5">
+                          آیا به چیزی غیر از آنچه در حال حاضر انجام می دهید فکر
+                          می کنید؟
+                        </p>
+                        <div
+                          class="col-12 mt-3 mb-2 d-flex justify-content-center"
+                          dir="rtl"
+                        >
+                          <div class="four-answer-container">
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="radio"
+                                id="1"
+                                name="check"
+                                value=""
+                              />
+                              <label for="1">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >خیر
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="radio"
+                                id="2"
+                                name="check"
+                                value=""
+                              />
+                              <label for="2">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >بله، به چیزی خوشایند
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="radio"
+                                id="3"
+                                name="check"
+                                value=""
+                              />
+                              <label for="3">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >بله، به چیزی خنثی
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="radio"
+                                id="4"
+                                name="check"
+                                value=""
+                              />
+                              <label for="4">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >بله، به چیزی ناخوشایند
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="splide__slide d-flex justify-content-center">
+                    <div class="col-10">
+                      <div>
+                        <div class="h6 fw-bold mb-3">سوال 3:</div>
+                        <p class="pb-5">
+                          چیزی که به آن فکر می کردید مربوط به گذشته بود یا
+                          آینده؟
+                        </p>
+                        <div class="col-12 mt-5 mb-2">
+                          <tc-range-slider
+                            rtl="true"
+                            slider-bg-fill="#4e51be"
+                            slider-width="100%"
+                            slider-height="0.9rem"
+                            pointer1-width="30px"
+                            pointer1-height="30px"
+                            value1="50"
+                            generate-labels="true"
+                            round="0"
+                            moving-tooltip="true"
+                            moving-tooltip-distance-to-pointer="40"
+                            moving-tooltip-width="35"
+                            moving-tooltip-height="30"
+                            moving-tooltip-bg="#4e51be"
+                            moving-tooltip-text-color="#efefef"
+                            moving-tooltip-units="%"
+                          ></tc-range-slider>
+                        </div>
+                        <div class="d-flex flex-wrap">
+                          <div class="col-6 text-start text-success left-range">
+                            آینده دور
+                          </div>
+                          <div class="col-6 text-end text-danger right-range">
+                            گذشته دور
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="splide__slide d-flex justify-content-center">
+                    <div class="col-10">
+                      <div>
+                        <div class="h6 fw-bold mb-3">سوال 4:</div>
+                        <p class="pb-5">
+                          آنچه به آن فکر می کردید چقدر با دغدغه های فعلی زندگی
+                          تان مرتبط بود؟
+                        </p>
+                        <div class="col-12 mt-5 mb-2">
+                          <tc-range-slider
+                            rtl="true"
+                            slider-bg-fill="#4e51be"
+                            slider-width="100%"
+                            slider-height="0.9rem"
+                            pointer1-width="30px"
+                            pointer1-height="30px"
+                            value1="50"
+                            generate-labels="true"
+                            round="0"
+                            moving-tooltip="true"
+                            moving-tooltip-distance-to-pointer="40"
+                            moving-tooltip-width="35"
+                            moving-tooltip-height="30"
+                            moving-tooltip-bg="#4e51be"
+                            moving-tooltip-text-color="#efefef"
+                            moving-tooltip-units="%"
+                          ></tc-range-slider>
+                        </div>
+                        <div class="d-flex flex-wrap">
+                          <div class="col-6 text-start text-success left-range">
+                            به شدت مرتبط بود
+                          </div>
+                          <div class="col-6 text-end text-danger right-range">
+                            اصلا مرتبط نبود
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="splide__slide d-flex justify-content-center">
+                    <div class="col-10">
+                      <div>
+                        <div class="h6 fw-bold mb-3">سوال 5:</div>
+                        <p class="pb-4">
+                          <span class="d-block mb-2"
+                            >در حال حاضر چه میکنید؟</span
+                          >
+                          <small class="w-100 mt-2" dir="rtl"
+                            >با تایید یک یا چند فعالیت از فعالیتهای اقتباس شده
+                            از مطالعه کروگر و همکاران (2008) (18)</small
+                          >
+                        </p>
+                        <div
+                          class="col-12 mt-3 d-flex justify-content-center"
+                          dir="rtl"
+                        >
+                          <div class="four-answer-container">
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="checkbox"
+                                id="01"
+                                name="check"
+                                value=""
+                              />
+                              <label for="01">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >بازی کردن
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="checkbox"
+                                id="02"
+                                name="check"
+                                value=""
+                              />
+                              <label for="02">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >روابط صمیمانه
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="checkbox"
+                                id="03"
+                                name="check"
+                                value=""
+                              />
+                              <label for="03">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >ریلکس کردن
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="checkbox"
+                                id="04"
+                                name="check"
+                                value=""
+                              />
+                              <label for="04">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >پیاده روی کردن
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="checkbox"
+                                id="05"
+                                name="check"
+                                value=""
+                              />
+                              <label for="05">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >تماشاکردن تلویزیون
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="checkbox"
+                                id="06"
+                                name="check"
+                                value=""
+                              />
+                              <label for="06">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >ورزش کردن
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="checkbox"
+                                id="07"
+                                name="check"
+                                value=""
+                              />
+                              <label for="07">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >خوردن
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="checkbox"
+                                id="08"
+                                name="check"
+                                value=""
+                              />
+                              <label for="08">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >خواندن
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="checkbox"
+                                id="09"
+                                name="check"
+                                value=""
+                              />
+                              <label for="09">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >آماده کردن غذا
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="checkbox"
+                                id="010"
+                                name="check"
+                                value=""
+                              />
+                              <label for="010">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >عبادت کردن یا مدیتیشن کردن
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="checkbox"
+                                id="012"
+                                name="check"
+                                value=""
+                              />
+                              <label for="012">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >استراحت کردن یا خوابیدن
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="checkbox"
+                                id="013"
+                                name="check"
+                                value=""
+                              />
+                              <label for="013">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >مراقبت از کودک
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="checkbox"
+                                id="014"
+                                name="check"
+                                value=""
+                              />
+                              <label for="014">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >کارکردن با کامپیوتر
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="checkbox"
+                                id="015"
+                                name="check"
+                                value=""
+                              />
+                              <label for="015">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >انجام دادن کار خانه
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="checkbox"
+                                id="016"
+                                name="check"
+                                value=""
+                              />
+                              <label for="016">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >خود مراقبتی یا آراستن
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="checkbox"
+                                id="017"
+                                name="check"
+                                value=""
+                              />
+                              <label for="017">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >خرید کردن
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="checkbox"
+                                id="018"
+                                name="check"
+                                value=""
+                              />
+                              <label for="018">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >گوش دادن به موزیک
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="checkbox"
+                                id="019"
+                                name="check"
+                                value=""
+                              />
+                              <label for="019">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >گوش دادن به رادیو و خبر
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="checkbox"
+                                id="020"
+                                name="check"
+                                value=""
+                              />
+                              <label for="020">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >کار کردن یا درس خواندن
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="checkbox"
+                                id="021"
+                                name="check"
+                                value=""
+                              />
+                              <label for="021">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >سفر کردن یا رفت و آمد کردن
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="checkbox"
+                                id="022"
+                                name="check"
+                                value=""
+                              />
+                              <label for="022">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >تعامل با دوستان یا خویشاوندان
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="checkbox"
+                                id="023"
+                                name="check"
+                                value=""
+                              />
+                              <label for="023">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >تعامل با دوستان یا خویشاوندان، همسر، بچه هایم،
+                                والدین، مشتریان یا دانشجویان یا دانش اموزان،
+                                همکاران، رییس، سایر افراد
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="checkbox"
+                                id="024"
+                                name="check"
+                                value=""
+                              />
+                              <label for="024">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >منتظر بودن، در کلاس، سمینار یا جلسه ای بودن
+                              </label>
+                            </div>
+                            <div
+                              class="checkbox-wrapper-24 col-12 col-sm-6 text-end"
+                            >
+                              <input
+                                type="checkbox"
+                                id="025"
+                                name="check"
+                                value=""
+                              />
+                              <label for="025">
+                                <span
+                                  ><!-- This span is needed to create the "checkbox" element --></span
+                                >سایر...
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <!-- <div class="buttons-container mt-5 pt-4">
+              <span
+                class="btn px-4 py-2 text-white"
+                style="background-color: #4d50be"
+                id="next"
+                >بعدی</span
+              >
+              <span class="btn px-4 py-2 btn-secondary" id="prev">قبلی</span>
+            </div> -->
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/libs/splidejs/splide.min.js"></script>
+    <script src="assets/libs/rangeslider/tcrs-moving-tooltip.min.js"></script>
+    <script src="assets/libs/rangeslider/toolcool-range-slider.min.js"></script>
+    <script src="assets/libs/scrollcue/scrollCue.min.js"></script>
+
+    <script>
+      $(".menu-btn").click(function () {
+        $(".menu").css("margin-right", "0%");
+      });
+      $(".close").click(function () {
+        $(".menu").css("margin-right", "-250%");
+      });
+
+      splide = new Splide(".splide", {
+        direction: "ltr",
+        pagination: false,
+        arrows: false,
+        drag: false,
+      });
+
+      splide.mount();
+
+      prev = document.querySelector("#prev");
+      prev.classList.add("opacity-50");
+
+      function updateHeight() {
+        active_slide = document.querySelector(".splide__slide.is-active");
+        the_splide = document.querySelector(".splide__list");
+        the_splide.style.height = active_slide.offsetHeight + 10 + "px";
+      }
+
+      // Update height on move event
+      splide.on("moved", updateHeight);
+
+      // Initial height setting
+      updateHeight();
+
+      document.querySelector("#next").addEventListener("click", () => {
+        splide.go("+1");
+        // Check for last slide to change button style
+        if (splide.index == splide.length - 1) {
+          next = document.querySelector("#next");
+          next.style.backgroundColor = "";
+          next.classList.add("btn-success");
+          next.textContent = "ثبت";
+        }
+        if (splide.index != 0) {
+          prev.classList.remove("opacity-50");
+        }
+      });
+
+      document.querySelector("#prev").addEventListener("click", () => {
+        splide.go("-1");
+        // Check for non-last slide to reset button style
+        if (splide.index != splide.length - 1) {
+          next.style.backgroundColor = "#4d50be";
+          next.classList.remove("btn-success");
+          next.textContent = "بعدی";
+        }
+        if (splide.index == 0) {
+          prev.classList.add("opacity-50");
+        }
+      });
+
+      scrollCue.init();
+
+    </script>
+  </body>
 </html>

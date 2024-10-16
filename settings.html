@@ -38,7 +38,7 @@
           </a>
         </li>
         <li>
-          <a href="settings.html">
+          <a href="https://">
             <i
               class="fa fa-user-circle-o"
               aria-hidden="true"
@@ -102,8 +102,10 @@
         </div>
         <div class="header-bottom">
           <img src="assets/images/patern.png" />
-          <h2 data-cue="slideInDown">خوش آمدید</h2>
-          <h6 data-cue="slideInRight">اپلیکیشن سنجش میزان خوشبختی</h6>
+          <h2 data-cue="slideInDown">تنظیم ساعت</h2>
+          <h6 data-cue="slideInRight">
+            ساعات اعلان تکمیل فرم روزانه را تنظیم کنید.
+          </h6>
         </div>
       </div>
       <div class="information">
@@ -113,77 +115,38 @@
           data-cues="slideInLeft"
           data-group="items"
         >
-          <a href="#" class="box-item mt-5">
-            <div class="right">
-              <div class="icon">
-                <i
-                  class="fa fa-user-circle-o"
-                  aria-hidden="true"
-                  style="color: #ff92a4"
-                ></i>
-              </div>
-            </div>
-            <div class="left-container">
-              <div class="left">
-                <h6>پروفایل من</h6>
-                <p>نمایش و ویرایش اطلاعات پروفایل</p>
-              </div>
-            </div>
-          </a>
-          <a href="settings.html" class="box-item">
-            <div class="right">
-              <div class="icon">
-                <i
-                  class="fa fa-user-circle-o"
-                  aria-hidden="true"
-                  style="color: #ffdd83"
-                ></i>
-              </div>
-            </div>
-            <div class="left-container">
-              <div class="left">
-                <h6>تنظیمات</h6>
-                <p>تنظیم ساعت خواب و بیداری</p>
-              </div>
-            </div>
-          </a>
-          <a
-            href="question_form.html"
-            class="box-item box-item-active overflow-hidden"
+          <div
+            class="d-flex justify-content-center align-items-center gap-3 mt-5 w-100"
           >
-            <div class="right">
-              <div class="icon">
-                <i
-                  class="fa fa-braille"
-                  aria-hidden="true"
-                  style="color: #4d50be"
-                ></i>
-              </div>
+            <div>از ساعت:</div>
+            <div class="w-50">
+              <input
+                type="time"
+                class="form-control text-center"
+                name=""
+                id=""
+              />
             </div>
-            <div class="left-container" style="background-color: #ffe9ce">
-              <div class="left">
-                <h6>فرم روزانه</h6>
-                <p>هر چند ساعت این فرم را پر کنید</p>
-              </div>
+          </div>
+          <div
+            class="d-flex justify-content-center align-items-center gap-3 w-100"
+          >
+            <div>تا ساعت:</div>
+            <div class="w-50">
+              <input
+                type="time"
+                class="form-control text-center"
+                name=""
+                id=""
+              />
             </div>
-          </a>
-          <a href="#" class="box-item">
-            <div class="right">
-              <div class="icon">
-                <i
-                  class="fa fa-user-circle-o"
-                  aria-hidden="true"
-                  style="color: #409a34"
-                ></i>
-              </div>
-            </div>
-            <div class="left-container">
-              <div class="left">
-                <h6>گزارشات</h6>
-                <p>نمودار پیشرفت اطلاعات هفتگی</p>
-              </div>
-            </div>
-          </a>
+          </div>
+          <small class="col-8" style="text-align: justify;">راهنما: مابین ساعات مشخص شده، پیامکی جهت یادآوری تکمیل فرم روزانه‌تان ارسال خواهد شد.</small>
+          <div class="buttons-container flex-wrap gap-3 mt-4 col-8">
+              <a href="#" class="btn bg-primary-color col-12">ذخیره</a>
+              <a href="/" class="btn btn-secondary col-12">انصراف</a>
+  
+          </div>
         </div>
       </div>
     </div>
@@ -194,6 +157,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="assets/libs/scrollcue/scrollCue.min.js"></script>
+
     <script>
       $(".menu-btn").click(function () {
         $(".menu").css("margin-right", "0%");
