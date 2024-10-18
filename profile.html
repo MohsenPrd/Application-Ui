@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/images/profile.png" />
+    <title>خوشبختی</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/libs/fontawesome/all.css" />
+    <link
+      rel="stylesheet"
+      href="assets/font/fontawesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/libs/jalalidatepicker/jalalidatepicker.css"
+    />
+    <link rel="stylesheet" href="assets/libs/scrollcue/scrollCue.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+  </head>
+  <body>
+    <div class="menu">
+        <img src="assets/images/patern.png" />
+        <i
+          class="fa fa-times-circle-o close"
+          aria-hidden="true"
+          style="color: white"
+        ></i>
+        <ul>
+          <li>
+            <a href="profile.html">
+              <i
+                class="fa fa-user-circle-o"
+                aria-hidden="true"
+                style="color: #ff92a4"
+              ></i>
+              پروفایل من
+            </a>
+          </li>
+          <li>
+            <a href="settings.html">
+              <i
+                class="fa fa-user-circle-o"
+                aria-hidden="true"
+                style="color: #ffdd83"
+              ></i>
+              تنظیمات
+            </a>
+          </li>
+          <li>
+            <a href="question_form.html">
+              <i
+                class="fa fa-braille"
+                aria-hidden="true"
+                style="color: #4d50be"
+              ></i>
+              فرم روزانه
+            </a>
+          </li>
+          <li>
+            <a href="report.html">
+              <i
+                class="fa fa-user-circle-o"
+                aria-hidden="true"
+                style="color: #409a34"
+              ></i>
+              گزارشات
+            </a>
+          </li>
+          <li>
+            <a href="login.html">
+              <i
+                class="fa fa-sign-out"
+                aria-hidden="true"
+                style="color: #c93939"
+              ></i>
+              خروج
+            </a>
+          </li>
+        </ul>
+      </div>
+    <div class="web_container web_container-login">
+      <div class="header">
+        <div
+          class="header-top position-relative overflow-hidden"
+          style="isolation: isolate"
+        >
+          <div class="icon-menu" data-cue="slideInRight">
+            <i class="fa fa-th menu-btn" aria-hidden="true"></i>
+          </div>
+          <div class="profile" data-cue="slideInLeft">
+            <img src="assets/images/user-icon.webp" />
+          </div>
+          <video
+            src="assets/images/particles.mp4"
+            loop
+            muted
+            autoplay
+            class="w-100 position-absolute"
+            style="mix-blend-mode: screen; z-index: -1"
+          ></video>
+        </div>
+        <div class="header-bottom">
+          <img src="assets/images/patern.png" />
+          <h2 data-cue="slideInDown">ویرایش پروفایل</h2>
+          <h6 data-cue="slideInRight">اطلاعات کاربری خود را تغییر دهید.</h6>
+        </div>
+      </div>
+      <div class="information">
+        <div class="web-body web-body-login">
+          <form method="post" action="#">
+            <div class="row p-5"             data-cues="slideInLeft"
+            data-group="items">
+              <div class="col-12">
+                <label class="mb-2" for="name">نام و نام خانوادگی</label>
+                <input
+                  type="text"
+                  class="form-control form-control-lg"
+                  id="name"
+                  placeholder="نام و نام خانوادگی را وارد کنید"
+                  value="امیر افضلی"
+                />
+                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+              </div>
+              <div class="col-12 mt-3">
+                <label class="mb-2" for="phone_number">شماره همراه</label>
+                <input
+                  type="tel"
+                  class="form-control form-control-lg"
+                  id="phone_number"
+                  dir="ltr"
+                  minlength="13"
+                  maxlength="13"
+                  value="091159846655"
+                  placeholder="شماره همراه را با پیشوند 0 وارد کنید"
+                />
+              </div>
+              <div
+                class="col-12 mt-3 d-flex flex-wrap justify-content-start text-end"
+              >
+                <label class="mb-2 col-12">جنسیت</label>
+                <!--Radio button-->
+                <div class="main d-flex">
+                  <input
+                    type="radio"
+                    name="checkbox"
+                    class="check"
+                    id="radio1"
+                    checked
+                  />
+                  <label
+                    class="label-checkbox pe-0"
+                    for="radio1"
+                    style="gap: 0"
+                  >
+                    <div class="container">
+                      <div class="cRadioBtn">
+                        <div class="overlay"></div>
+                        <div class="drops xsDrop"></div>
+                        <div class="drops mdDrop"></div>
+                        <div class="drops lgDrop"></div>
+                      </div>
+                    </div>
+                    <div>مرد</div>
+                  </label>
+                  <input
+                    type="radio"
+                    name="checkbox"
+                    class="check"
+                    id="radio2"
+                  />
+                  <label class="label-checkbox" for="radio2" style="gap: 0">
+                    <div class="container m-0">
+                      <div class="cRadioBtn">
+                        <div class="overlay"></div>
+                        <div class="drops xsDrop"></div>
+                        <div class="drops mdDrop"></div>
+                        <div class="drops lgDrop"></div>
+                      </div>
+                    </div>
+                    <div>زن</div>
+                  </label>
+                </div>
+              </div>
+              <div class="col-12 mt-3">
+                <label class="mb-2" for="birthdate">تاریخ تولد</label>
+                <input
+                  type="text"
+                  class="form-control form-control-lg"
+                  id="birthdate"
+                  data-jdp
+                  data-jdp-max-date="1384/12/30"
+                  placeholder="تاریخ تولد را وارد کنید"
+                  value="1370/02/10"
+                />
+              </div>
+              <div class="buttons-container flex-wrap gap-3 mt-5 col-12 pb-5">
+                <input
+                  type="submit"
+                  class="btn bg-primary-color col-12"
+                  value="ذخیره"
+                />
+                <a href="/" class="btn btn-secondary col-12 p-2">انصراف</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"
+    ></script>
+    <script src="assets/libs/scrollcue/scrollCue.min.js"></script>
+    <script src="assets/libs/cleavejs/cleave.min.js"></script>
+    <script src="assets/libs/cleavejs/cleave-phone.ir.js"></script>
+    <script>
+      $(".menu-btn").click(function () {
+        $(".menu").css("margin-right", "0%");
+      });
+      $(".close").click(function () {
+        $(".menu").css("margin-right", "-250%");
+      });
+
+      var cleave = new Cleave("#phone_number", {
+        phone: true,
+        phoneRegionCode: "IR",
+      });
+
+      jalaliDatepicker.startWatch({
+        maxDate: "attr",
+        showTodayBtn: false,
+        showEmptyBtn: false,
+      });
+
+
+      scrollCue.init();
+
+    </script>
+  </body>
+</html>

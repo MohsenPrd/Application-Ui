@@ -28,7 +28,7 @@
       ></i>
       <ul>
         <li>
-          <a href="https://">
+          <a href="profile.html">
             <i
               class="fa fa-user-circle-o"
               aria-hidden="true"
@@ -38,7 +38,7 @@
           </a>
         </li>
         <li>
-          <a href="https://">
+          <a href="settings.html">
             <i
               class="fa fa-user-circle-o"
               aria-hidden="true"
@@ -58,7 +58,7 @@
           </a>
         </li>
         <li>
-          <a href="https://">
+          <a href="report.html">
             <i
               class="fa fa-user-circle-o"
               aria-hidden="true"
@@ -112,60 +112,69 @@
         <form
           method="post"
           action="#"
+          id="time_form"
           class="web-body gap-4"
           style="align-content: start"
           data-cues="slideInLeft"
           data-group="items"
         >
-          <div
-            class="d-flex justify-content-center align-items-center gap-3 mt-5 w-100"
+          <!-- <small class="col-8 mt-5 text-center"
+            >توجه: اختلاف بین ساعت شروع و پایان باید <u>6 ساعت</u> یا کمتر
+            باشد.</small
+          > -->
+          <small class="col-10 text-center mt-5 mb-3">
+            <div class="d-block fw-semibold my-1">راهنما:</div>
+            مابین ساعات مشخص شده، پیامکی جهت یادآوری تکمیل فرم روزانه‌تان ارسال
+            خواهد شد.</small
           >
-            <div>از ساعت:</div>
-            <div class="w-50">
-              <input
-                type="time"
-                value="00:00"
-                required
-                id="from-time"
-                oninvalid="setCustomError(this)"
-                oninput="setCustomValidity(''); setMax(this.value)"
-                class="form-control text-center"
-                name=""
-                id=""
-              />
+          <div class="d-flex flex-wrap col-10">
+            <div class="col-12 mt-5 mb-4">
+              <tc-range-slider
+                dir="ltr"
+                rtl="true"
+                marks="true"
+                marks-count="24"
+                marks-values-color="hsl(0, 0%, 98%)"
+                marks-values-count="24"
+                slider-bg-fill="#4e51be"
+                slider-width="100%"
+                slider-height="0.9rem"
+                pointer1-width="30px"
+                pointer1-height="30px"
+                generate-labels="true"
+                round="0"
+                min="0"
+                max="23"
+                value1="12"
+                value2="20"
+                moving-tooltip-units=":00"
+                generate-labels="true"
+                moving-tooltip="true"
+                moving-tooltip-distance-to-pointer="40"
+                moving-tooltip-width="35"
+                moving-tooltip-height="30"
+                moving-tooltip-bg="#4e51be"
+                moving-tooltip-text-color="#efefef"
+              ></tc-range-slider>
+            </div>
+            <div class="d-flex col-12 flex-wrap" style="z-index: 10">
+              <div class="col-6 text-end right-range">
+                <i class="fa-regular fa-hourglass-start"></i>
+                00:00
+              </div>
+              <div class="col-6 text-start left-range">
+                23:00
+                <i class="fa-regular fa-hourglass-end"></i>
+              </div>
             </div>
           </div>
-          <div
-            class="d-flex justify-content-center align-items-center gap-3 w-100"
-          >
-            <div>تا ساعت:</div>
-            <div class="w-50">
-              <input
-                type="time"
-                required
-                value="00:00"
-                max="12:00"
-                min="00:00"
-                id="to-time"
-                oninvalid="setCustomError(this)"
-                oninput="setCustomValidity('')"
-                class="form-control text-center"
-                name=""
-                id=""
-              />
-            </div>
-          </div>
-          <small class="col-8" style="text-align: justify"
-            >راهنما: مابین ساعات مشخص شده، پیامکی جهت یادآوری تکمیل فرم
-            روزانه‌تان ارسال خواهد شد.</small
-          >
-          <div class="buttons-container flex-wrap gap-3 mt-4 col-8">
+          <div class="buttons-container flex-wrap gap-3 mt-3 col-10">
             <input
               type="submit"
               class="btn bg-primary-color col-12"
               value="ذخیره"
             />
-            <a href="/" class="btn btn-secondary col-12">انصراف</a>
+            <a href="/" class="btn btn-secondary col-12 p-2">انصراف</a>
           </div>
         </form>
       </div>
@@ -176,7 +185,11 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script> -->
     <script src="assets/libs/scrollcue/scrollCue.min.js"></script>
+    <script src="assets/libs/rangeslider/tcrs-marks.min.js"></script>
+    <script src="assets/libs/rangeslider/tcrs-moving-tooltip.min.js"></script>
+    <script src="assets/libs/rangeslider/toolcool-range-slider.min.js"></script>
 
     <script>
       $(".menu-btn").click(function () {
@@ -186,49 +199,59 @@
         $(".menu").css("margin-right", "-250%");
       });
 
-      function setCustomError(input) {
-        if (input.validity.valueMissing) {
-          input.setCustomValidity("این فیلد الزامی است");
-        } else if (input.validity.rangeUnderflow) {
-          input.setCustomValidity(
-            "باید کمتر از 12 ساعت با ساعت اول فاصله اختلاف باشد"
-          );
-        } else if (input.validity.rangeOverflow) {
-          input.setCustomValidity(
-            "باید کمتر از 12 ساعت با ساعت اول فاصله اختلاف باشد"
-          );
-        } else if (
-          input.validity.rangeOverflow ||
-          input.validity.rangeUnderflow
-        ) {
-          input.setCustomValidity(
-            "مقدار باید بین " + input.min + " و " + input.max + " باشد"
-          );
-        }
-      }
+      // function setMinMax(value) {
+      //   var time1 = value;
+      //   var time1Parts = time1.split(":");
+      //   var hours1 = parseInt(time1Parts[0]);
+      //   var minutes1 = parseInt(time1Parts[1]);
 
-      function setMax(value) {
-        var time1 = value;
-        var time1Parts = time1.split(":");
-        var hours1 = parseInt(time1Parts[0]);
-        var minutes1 = parseInt(time1Parts[1]);
+      //   // Add 6 hours
+      //   var totalMinutes1 = hours1 * 60 + minutes1;
+      //   var totalMinutesMax = totalMinutes1 + 6 * 60;
 
-        // Add 12 hours * minutes
-        var totalMinutes1 = hours1 * 60 + minutes1;
-        var totalMinutesMax = totalMinutes1 + 12 * 60;
+      //   // Convert to minutes and hours
+      //   var maxHours = Math.floor(totalMinutesMax / 60) % 24;
+      //   var maxMinutes = totalMinutesMax % 60;
 
-        // convert to hours
-        var maxHours = Math.floor(totalMinutesMax / 60) % 24;
-        var maxMinutes = totalMinutesMax % 60;
+      //   var resultHours = maxHours.toString().padStart(2, "0");
+      //   var resultMinutes = maxMinutes.toString().padStart(2, "0");
 
-        var resultHours = maxHours.toString().padStart(2, "0");
-        var resultMinutes = maxMinutes.toString().padStart(2, "0");
+      //   var to_time = document.querySelector("#to-time");
+      //   to_time.setAttribute("max", resultHours + ":" + resultMinutes);
+      //   to_time.setAttribute("min", value);
+      // }
 
-        to_time = document.querySelector("#to-time");
-
-        to_time.setAttribute("max", resultHours + ":" + resultMinutes);
-        to_time.setAttribute("min", value);
-      }
+      // $("#time_form").validate({
+      //   rules: {
+      //     from_time: {
+      //       required: true,
+      //     },
+      //     to_time: {
+      //       required: true,
+      //       min: function () {
+      //         return $("#from-time").val();
+      //       },
+      //       max: function () {
+      //         return $("#to-time").attr("max");
+      //       },
+      //     },
+      //   },
+      //   messages: {
+      //     from_time: {
+      //       required: "این فیلد الزامیست!",
+      //     },
+      //     to_time: {
+      //       required: "این فیلد الزامیست!",
+      //       min: "حداقل ساعت شروع 01:00 میباشد.",
+      //       max: "حداکثر ساعت پایان 00:00 میباشد.",
+      //     },
+      //   },
+      //   errorPlacement: function (label, element) {
+      //     label.addClass("error_validation");
+      //     label.insertAfter(element);
+      //   },
+      //   wrapper: "span",
+      // });
 
       scrollCue.init();
     </script>

@@ -17,6 +17,7 @@
     />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/libs/scrollcue/scrollCue.css" />
+    <link rel="stylesheet" href="assets/libs/toastr/toastr.css" />
   </head>
   <body>
     <div class="menu">
@@ -28,7 +29,7 @@
       ></i>
       <ul>
         <li>
-          <a href="https://">
+          <a href="profile.html">
             <i
               class="fa fa-user-circle-o"
               aria-hidden="true"
@@ -58,7 +59,7 @@
           </a>
         </li>
         <li>
-          <a href="https://">
+          <a href="report.html">
             <i
               class="fa fa-user-circle-o"
               aria-hidden="true"
@@ -83,7 +84,7 @@
       <div class="header">
         <div
           class="header-top position-relative overflow-hidden"
-          style="isolation: isolate"
+          style="isolation: isolate;"
         >
           <div class="icon-menu" data-cue="slideInRight">
             <i class="fa fa-th menu-btn" aria-hidden="true"></i>
@@ -113,7 +114,7 @@
           data-cues="slideInLeft"
           data-group="items"
         >
-          <a href="#" class="box-item mt-5">
+          <a href="profile.html" class="box-item mt-5">
             <div class="right">
               <div class="icon">
                 <i
@@ -148,7 +149,7 @@
             </div>
           </a>
           <a
-            href="question_form.html"
+            href="continue_or_snooze.html"
             class="box-item box-item-active overflow-hidden"
           >
             <div class="right">
@@ -167,7 +168,7 @@
               </div>
             </div>
           </a>
-          <a href="#" class="box-item">
+          <a href="report.html" class="box-item">
             <div class="right">
               <div class="icon">
                 <i
@@ -194,6 +195,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="assets/libs/scrollcue/scrollCue.min.js"></script>
+    <script src="assets/libs/toastr/toastr.js"></script>
+
     <script>
       $(".menu-btn").click(function () {
         $(".menu").css("margin-right", "0%");
@@ -201,6 +204,25 @@
       $(".close").click(function () {
         $(".menu").css("margin-right", "-250%");
       });
+
+      toastr.options = {
+        closeButton: false,
+        debug: false,
+        newestOnTop: false,
+        progressBar: true,
+        positionClass: "toast-top-center",
+        preventDuplicates: false,
+        onclick: null,
+        showDuration: "300",
+        hideDuration: "1000",
+        timeOut: "5000",
+        extendedTimeOut: "1000",
+        showEasing: "swing",
+        hideEasing: "linear",
+        showMethod: "slideDown",
+        hideMethod: "fadeOut",
+      };
+      toastr.info("10 دقیقه دیگر به شما یادآوری خواهد شد.", "به تعویق افتاد");
 
       scrollCue.init();
     </script>
